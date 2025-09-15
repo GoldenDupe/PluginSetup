@@ -1,4 +1,4 @@
-package bet.astral.pluginsetup.plugin;
+package bet.astral.vanished.plugin;
 
 import io.papermc.paper.plugin.loader.PluginClasspathBuilder;
 import io.papermc.paper.plugin.loader.PluginLoader;

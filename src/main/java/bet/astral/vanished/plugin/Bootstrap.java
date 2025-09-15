@@ -1,12 +1,12 @@
-package bet.astral.pluginsetup.plugin;
+package bet.astral.vanished.plugin;
 
 import bet.astral.cloudplusplus.minecraft.paper.bootstrap.BootstrapHandler;
 import bet.astral.messenger.v2.Messenger;
 import bet.astral.messenger.v2.source.LanguageTable;
 import bet.astral.messenger.v2.source.source.gson.GsonLanguageSource;
 import bet.astral.messenger.v3.minecraft.paper.PaperMessenger;
-import bet.astral.pluginsetup.command.ExampleCommand;
-import bet.astral.pluginsetup.command.PluginCommandManager;
+import bet.astral.vanished.command.PluginCommandManager;
+import bet.astral.vanished.command.VanishCommand;
 import io.papermc.paper.command.brigadier.CommandSourceStack;
 import io.papermc.paper.plugin.bootstrap.BootstrapContext;
 import io.papermc.paper.plugin.bootstrap.PluginBootstrap;
@@ -20,7 +20,7 @@ import java.io.File;
 import java.util.Locale;
 
 public class Bootstrap extends BootstrapHandler implements PluginBootstrap {
-    private static String NAME = "PluginCommand";
+    private static String NAME = "Vanished";
     @Getter
     private PluginCommandManager commandManager;
     @Getter
@@ -33,7 +33,7 @@ public class Bootstrap extends BootstrapHandler implements PluginBootstrap {
         registerCommands();
     }
     private void registerCommands() {
-        commandManager.registerCommands(ExampleCommand.class.getPackageName());
+        commandManager.registerCommands(VanishCommand.class.getPackageName());
     }
     private Messenger initializeMessenger(BootstrapContext bootstrapContext) {
         Messenger messenger = new PaperMessenger(ComponentLogger.logger(NAME));
